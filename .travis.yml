@@ -33,6 +33,6 @@ matrix:
          language: generic
          env:
 install:
-  - ./.travis/install.sh
+  - bash ./.travis/install.sh
 script:
-  - ./.travis/run.sh
+  - bash ./.travis/run.sh
