@@ -20,4 +20,4 @@ install:
   - conan user sunxfancy # It creates the conan data directory
 
 test_script:
-  - C:\Python27-x64\python build.py
+  - C:\Python27\python build.py
