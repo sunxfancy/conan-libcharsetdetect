@@ -1,6 +1,6 @@
 build: false
 environment:
-    PYTHON: "C:\\Python27-x64"
+    PYTHON: "C:\\Python27"
     PYTHON_VERSION: "2.7.11"
     PYTHON_ARCH: "32"
 
