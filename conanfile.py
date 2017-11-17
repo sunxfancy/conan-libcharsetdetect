@@ -1,4 +1,5 @@
 from conans import ConanFile, CMake, tools
+import os
 
 class LibCharsetDetectConan(ConanFile):
     name = "libcharsetdetect"
@@ -13,7 +14,9 @@ class LibCharsetDetectConan(ConanFile):
 
     def source(self):
         # this will create a hello subfolder, take it into account
-        self.run("git clone https://github.com/elite-lang/libcharsetdetect/")
+        tools.download("https://github.com/elite-lang/libcharsetdetect/archive/master.zip", "master.zip")
+        tools.unzip("master.zip")
+        os.unlink("master.zip")
         conan_magic_lines = '''PROJECT(charsetdetect)
         include(../conanbuildinfo.cmake)
         CONAN_BASIC_SETUP()
