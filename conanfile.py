@@ -13,7 +13,7 @@ class LibCharsetDetectConan(ConanFile):
 
     def source(self):
         # this will create a hello subfolder, take it into account
-        self.run("git clone https://github.com/elite-lang/libcharsetdetect.git")
+        self.run("git clone https://github.com/elite-lang/libcharsetdetect/")
         conan_magic_lines = '''PROJECT(charsetdetect)
         include(../conanbuildinfo.cmake)
         CONAN_BASIC_SETUP()
