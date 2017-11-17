@@ -1,6 +1,6 @@
 env:
    global:
-     - CONAN_REFERENCE: "eobject/0.1.0"
+     - CONAN_REFERENCE: "libcharsetdetect/1.1"
      - CONAN_USERNAME: "sunxfancy"
      - CONAN_LOGIN_USERNAME: "sunxfancy"
      - CONAN_CHANNEL: "ci"
