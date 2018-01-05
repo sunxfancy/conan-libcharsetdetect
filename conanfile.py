@@ -3,7 +3,7 @@ import os
 
 class LibCharsetDetectConan(ConanFile):
     name = "libcharsetdetect"
-    version = "1.1"
+    version = "1.1.1"
     license = "LGPL"
     url = "https://github.com/sunxfancy/conan-libcharsetdetect"
     settings = "os", "compiler", "build_type", "arch"
@@ -24,7 +24,7 @@ class LibCharsetDetectConan(ConanFile):
         tools.replace_in_file("libcharsetdetect-master/CMakeLists.txt", "PROJECT(charsetdetect)", conan_magic_lines)
 
     def build(self):
-        cmake = CMake(self.settings)
+        cmake = CMake(self)
         shared = "-DBUILD_SHARED_LIBS=ON" if self.options.shared else ""
         self.run('cmake %s/libcharsetdetect-master %s %s' % (self.conanfile_directory, cmake.command_line, shared))
         self.run("cmake --build . %s" % cmake.build_config)
